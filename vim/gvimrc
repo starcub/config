@@ -1,0 +1,51 @@
+"set guifont=Serif\ 11
+"set guifont=AR\ PL\ New\ Sung\ 11
+"set guifont=AR\ PL\ ShanHeiSun\ Uni\ 11
+
+set nu
+"colorscheme koehler
+colorscheme darkblue
+":colorscheme koehler
+
+set linespace=5
+
+"set foldenable
+"set foldminlines=0
+"set foldmethod=manual
+"set foldlevel=9999
+"set foldcolumn=0
+
+"输入法
+"set imactivatekey=C-space
+"inoremap <ESC> <ESC>:set iminsert=2<CR>
+
+" ###########################################################
+" 菜单添加
+" 工具菜单
+"an 40.200         &Tools.-SEP0-                          <Nop>
+an 40.200.10      &Tools.Taglist\ Show              :Tlist<CR>
+an 40.200.15      &Tools.Taglist\ Update            :TlistUpdate<CR>
+
+" 编辑菜单
+an 20.4009        &Edit.-SEP6-                           <Nop>
+an 20.4009.10      &Edit.MouseStype.&Xterm         :behave xterm<CR>
+an 20.4009.11      &Edit.MouseStype.&MsWin         :behave mswin<CR>
+
+an 20.4119.10     &Edit.Fileencoding.&GBK        :set fileencoding=gbk<CR>
+an 20.4119.11     &Edit.Fileencoding.GB18030     :set fileencoding=gb18030<CR>
+an 20.4119.12     &Edit.Fileencoding.&Big5       :set fileencoding=big5<CR>
+an 20.4119.13     &Edit.Fileencoding.&UTF-8      :set fileencoding=utf-8<CR>
+an 20.4119.14     &Edit.Fileencoding.UTF-16      :set fileencoding=utf-16<CR>
+an 20.4119.15     &Edit.Fileencoding.EUC-&JP     :set fileencoding=euc-jp<CR>
+an 20.4119.16     &Edit.Fileencoding.EUC-&KR     :set fileencoding=euc-kr<CR>
+
+an 20.4129        &Edit.-SEP9-                           <Nop>
+an 20.4159     &Edit.utf8\ \ convert.utf8->gb    :%!autogb -i utf8 -o gb<CR>
+an 20.4159     &Edit.utf8\ \ convert.utf8->big5  :%!autogb -i utf8 -o big5<CR>
+an 20.4159     &Edit.utf8\ \ convert.utf8->hz    :%!autogb -i utf8 -o hz<CR>
+"an 20.4159     &Edit.zh\ \ convert.utf8->utf8  :%!autogb -i utf8 -o utf8<CR>
+an 20.4159     &Edit.utf8\ \ convert.utf8->utf7  :%!autogb -i utf8 -o utf7<CR>
+an 20.4159     &Edit.utf8\ \ convert.utf8->uni   :%!autogb -i utf8 -o uni<CR>
+
+"set foldenable foldminlines=0 foldmethod=manual foldlevel=9999 foldcolumn=5 fdm=syntax
+
